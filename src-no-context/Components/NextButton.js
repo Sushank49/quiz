@@ -1,8 +1,6 @@
 import { useEffect } from "react";
-import { useQuiz } from "../context/QuizContext";
 
-function NextButton() {
-  const { dispatch, answer, index, numQuestions } = useQuiz();
+function NextButton({ dispatch, answer, index, numQuestions }) {
   useEffect(function () {
     document.addEventListener("keypress", onKeyPress);
   }, []);
